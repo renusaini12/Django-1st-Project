@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\loginData.css' %}">
+</head>
+
+<body>
+    <div class="loginpage">
+    <h1>Login Page</h1>
+        <form action="loginData"id= "form1" method="post">{% csrf_token %}
+            <input class=" text1" type="text" name="Name" placeholder="User Name"><br><br>
+            <input class=" text1" type="text" name="Mobileno" placeholder="Mobileno."><br><br>
+            <input class=" text1" type="email" name="Email" placeholder="E-Mail"><br><br>
+            <input class=" text1" type="text" name="subject" placeholder="Password"><br><br>
+            <input class=" text1" type="text" placeholder="Write what do you want"><br><br>
+            <input type="submit"id="button1" value="Login">
+        </form>
+    </div>
+{% endblock content %}
+
